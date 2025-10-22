@@ -2,4 +2,6 @@
 
 Learning and practicing version control!
 
-More Content!
+Another adjustment!
+
+More Content
