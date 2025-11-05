@@ -29,6 +29,27 @@ python app/rps.py
 python -m app.rps
 ```
 
+Create a virtual environment:
+
+```sh
+conda create -n my-first-env-fall-2025 python=3.11
+```
+
+Activate the virtual environment:
+
+```sh
+conda activate -n my-first-env-fall-2025 python=3.11
+```
+
+Install package dependencies:
+
+
+## Testing
+Run tests:
+```sh
+pytest
+```
+
 ## Stuff from testing out README
 
 For more information about Markdown syntax, see the [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/).
