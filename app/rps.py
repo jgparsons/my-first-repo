@@ -1,20 +1,5 @@
 import random
 VALID_OPTIONS = ["rock","paper","scissors"]
-#ask user for input
-user_choice = input("Please chhoose one of 'rock,' 'paper,' or 'scissors.'")
-print("user choice:", user_choice)
-#validations
-if user_choice not in VALID_OPTIONS:
-    print("Oops")
-    exit()
-#generate a random computer choice
-computer_choice = random.choice(VALID_OPTIONS)
-print("computer choice:", computer_choice)
-#determine the winner
-#quick alias to facilitate some copying and pasting
-# we will soon move this into a function anyway
-u = user_choice
-c = computer_choice
 def determine_winner(u, c):
     if u == "rock" and c == "rock":
         return "TIE GAME"
@@ -34,8 +19,24 @@ def determine_winner(u, c):
         return "USER WINS"
     elif u == "scissors" and c == "scissors":
         return "TIE GAME"
+    
+if __name__ == "__main__":
+    # ONLY RUN THE CODE BELOW IF WE ARE
+    # RUNNING THIS SCRIPT FROM THE COMMAND LINE
+    # BUT NOT IF WE'RE TRYING TO JUST IMPORTANT SOME STUFF FROM THIS
+    # ask user for input
+    user_choice = input("Please chhoose one of 'rock,' 'paper,' or 'scissors.'")
+    print("user choice:", user_choice)
+    # validations
+    if user_choice not in VALID_OPTIONS:
+        print("Oops")
+        exit()
+    # generate a random computer choice
+    computer_choice = random.choice(VALID_OPTIONS)
+    print("computer choice:", computer_choice)
+    # determine the winner
+    # quick alias to facilitate some copying and pasting
+    # we will soon move this into a function anyway
 
-result = determine_winner(user_choice, computer_choice)
-print(result)
-
-#assert ______ == ______
+    result = determine_winner(user_choice, computer_choice)
+    print(result)
