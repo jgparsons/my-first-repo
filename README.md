@@ -1,55 +1,55 @@
-# My First Repo!
-
-This is the README.md file. It uses the markdown language.
+# my-first-repo-summer-2025
 
 ## Setup
 
-Clone the repo to download it from GitHub. Perhaps onto the Desktop (probably just put it in Documents).
+### Virtual Environment
 
-Naviage to the repo using the command line.
+Create and activate a virtual environment:
 
 ```sh
-cd ~/Documents/GitHub/my-first-repo
+conda create -n my-first-env-2025 python=3.11
+conda activate my-first-env-2025
 ```
+
+### Packages
+
+Install packages:
+
+```sh
+# pip install pytest
+pip install -r requirements.txt
+```
+
+### Secret Credentials
+
+For the stocks dashboard, you will need to acquire a "premium" [AlphaVantage](https://www.alphavantage.co/) API key (from the prof) and supply it as an environment variable. Create a local ".env" file and place inside contents like the following:
+
+```sh
+# this is the ".env" file...
+
+# replace "demo" with your premium key:
+ALPHAVANTAGE_API_KEY="demo"
+```
+
+Also, for the stocks tests to work on GitHub Actions, you will need to set a repository secret named `ALPHAVANTAGE_API_KEY` via the repository's settings on GitHub.
 
 ## Usage
 
-Example script:
-
+Play a game of rock, paper scissors:
 ```sh
-python app/my_script.py
-```
-
-Game of rock, paper, scissors:
-
-```sh
-python app/rps.py
-
-# alternative "modular style" command:
 python -m app.rps
 ```
 
-Create a virtual environment:
+Run the stocks dashboard:
 
 ```sh
-conda create -n my-first-env-fall-2025 python=3.11
+python -m app.stocks
 ```
 
-Activate the virtual environment:
+## Tests
 
+Run the tests:
 ```sh
-conda activate -n my-first-env-fall-2025 python=3.11
-```
-
-Install package dependencies:
-
-
-## Testing
-Run tests:
-```sh
+# find all the tests and run them:
 pytest
 ```
-
-## Stuff from testing out README
-
-For more information about Markdown syntax, see the [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/).
