@@ -1,7 +1,5 @@
 # this is the requirements.txt file
-
 pytest
-os
 pandas
 dotenv
 plotly

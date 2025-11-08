@@ -1,4 +1,3 @@
-@@ -1,7 +1,9 @@
 # my-first-repo-summer-2025
 
 ## Setup
@@ -37,7 +36,7 @@ Also, for the stocks tests to work on GitHub Actions, you will need to set a rep
 ## Usage
 
 Play a game of rock, paper scissors:
-@@ -30,6 +47,12 @@ python app/rps.py
+```sh
 python -m app.rps
 ```
 
