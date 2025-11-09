@@ -1,3 +1,6 @@
-#this conftest.py file helps pytest understand the structure of the 
+# this is the "conftest.py" file
 
-#[something I missed] and find the app code
+# it helps pytest find the structure of the app
+# and helps test files import from the app dir
+
+# FYI: this can be blank
