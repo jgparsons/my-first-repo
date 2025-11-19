@@ -24,7 +24,7 @@ def results():
 
     outcome = determine_winner(user_choice, computer_choice)
 
-    return render_template("results.html",
+    return render_template("rps_results.html",
         user_choice=user_choice,
         computer_choice=computer_choice,
         outcome=outcome
