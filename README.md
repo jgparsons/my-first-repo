@@ -29,6 +29,7 @@ For the stocks dashboard, you will need to acquire a "premium" [AlphaVantage](ht
 
 # replace "demo" with your premium key:
 ALPHAVANTAGE_API_KEY="demo"
+FLASK_APP=web_app
 ```
 
 Also, for the stocks tests to work on GitHub Actions, you will need to set a repository secret named `ALPHAVANTAGE_API_KEY` via the repository's settings on GitHub.
@@ -44,6 +45,21 @@ Run the stocks dashboard:
 
 ```sh
 python -m app.stocks
+```
+
+### Web App
+
+Run the web app (then view in the browser at http://localhost:5000/):
+
+```sh
+# Mac OS:
+FLASK_APP=web_app flask run
+
+# Windows OS:
+# ... if `export` doesn't work for you, try `set` instead
+# ... or set FLASK_APP variable via ".env" file
+export FLASK_APP=web_app
+flask run
 ```
 
 ## Tests
